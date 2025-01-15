@@ -66,8 +66,8 @@ const Dashboard = () => {
     <div className="flex flex-row flex-wrap justify-center gap-6">
   {[
     { src: '/images/html.png', label: 'HTML' },
-    { src: '/images/css.png', label: 'CSS' },
-    { src: '/images/js.png', label: 'JavaScript' },
+    { src: '/images/CSS.png', label: 'CSS' },
+    { src: '/images/JS.png', label: 'JavaScript' },
     { src: '/images/react.png', label: 'React' },
     { src: '/images/nextjs1.png', label: 'Next.js' },
     { src: '/images/seo.png', label: 'SEO' },
