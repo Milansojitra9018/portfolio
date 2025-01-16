@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { servicesData } from '../utils/alltype';
+import { servicesData, projectData, technologyData } from '../utils/alltype';
 import Image from 'next/image';
 
 const Dashboard = () => {
@@ -64,14 +64,7 @@ const Dashboard = () => {
     <section id="myskills" className='bg-[#dddddd] dark:bg-dark-primary font-sans'>
     <h2 className="text-5xl font-bold mb-8 text-center dark:text-[#ffffff] text-[#000000]">My Skills</h2>
     <div className="flex flex-row flex-wrap justify-center gap-6">
-  {[
-    { src: '/images/html.png', label: 'HTML' },
-    { src: '/images/CSS.png', label: 'CSS' },
-    { src: '/images/JS.png', label: 'JavaScript' },
-    { src: '/images/react.png', label: 'React' },
-    { src: '/images/nextjs1.png', label: 'Next.js' },
-    { src: '/images/seo.png', label: 'SEO' },
-  ].map((item, index) => (
+  {technologyData.map((item, index) => (
     <div
       key={index}
       className="flex flex-col flex-wrap  border border-[#000000] dark:border-[#ffffff] justify-center items-center w-[150px] h-[150px] bg-gray-100 rounded-lg shadow-md"
@@ -82,7 +75,7 @@ const Dashboard = () => {
           alt={item.label}
           width={100}
           height={50}
-          className={`object-contain ${item?.label === 'HTML' ? 'h-[68px]' : ''}`}
+          className={`object-contain ${item?.label === 'HTML' ? 'h-[68px]' : 'h-20'}  ${item?.label === 'SEO' || item?.label === 'Next.js' ? 'dark:bg-dark-secondary p-2' : ''} ${item?.label === 'CSS' ? 'h-24 w-24' : ''}`}
         />
       </div>
       <p className="dark:text-[#ffffff] text-dark-primary mt-3 text-center font-medium text-sm">
@@ -100,11 +93,8 @@ const Dashboard = () => {
       Here is an overview of my educational journey and achievements.
       </p>
       <div className="w-full max-w-[400px] items-center justify-center">
-    <motion.div
-      className="border border-secondary dark:border-dark-secondary bg-white dark:bg-dark-primary text-gray-800 dark:text-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <div
+      className="border border-secondary dark:border-dark-secondary bg-white dark:bg-dark-secondary text-gray-800 dark:text-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
     >
       <div className="w-full flex flex-col justify-center items-center mb-4">
        <div className='flex justify-center items-center gap-2'>
@@ -114,7 +104,7 @@ const Dashboard = () => {
         <p className="text-sm text-center text-dark-secondary dark:text-dark-textgray font-semibold">Bachelor of Engineering in Computer Engineering</p>
         <p className="text-sm text-dark-secondary dark:text-dark-textgray">Graduated: 2023</p>
       </div>
-    </motion.div>
+    </div>
   </div>
     </section>
    <div className='bg-dark-secondaryhover h-1 my-16 dark:bg-dark-secondary'/>
@@ -136,7 +126,7 @@ const Dashboard = () => {
         <Image
           src={service.icon} 
           alt={`${service.title} icon`} 
-          className="h-full w-full max-md:h-[100px]" 
+          className="h-full w-full max-md:h-[200px] object-center" 
           width={50}
           height={50}
           unoptimized
@@ -156,24 +146,7 @@ const Dashboard = () => {
     As a frontend developer, I have worked on a variety of projects that demonstrate my skills in React, Next.js, and Tailwind CSS. Below are a few highlights of my recent work:
   </p>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {[
-      {
-        title: "Len Admin",
-        description: "Developed a dynamic admin panel with functionalities including creating, adding, filtering, and searching songs. Implemented bulk upload support via CSV files for efficient management of multiple songs, streamlining content administration.",
-      },
-      {
-        title: "Softus Infotech Portfolio",
-        description: "Designed and developed a professional portfolio for Softus Infotech, showcasing their services and projects with a clean, modern interface built on Next.js for fast loading times and excellent SEO optimization.",
-      },
-      {
-        title: 'jewellary web App',
-        description: 'A responsive jewelry website designed to showcase various jewelry products, allowing users to browse through collections, view product details, and add items to their cart. '
-      },
-      {
-        title: 'Donation App',
-        description: 'I created a donation website optimized for the Korea, integrating popular payment methods like KakaoPay, TossPay, CMS, card payments, NPay, and Payco. The platform includes digital signature functionality for secure transactions.'
-      }
-    ].map((project, index) => (
+    {projectData.map((project, index) => (
       <motion.div
         key={index}
         className="border border-primary dark:bg-primary p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300"
@@ -240,7 +213,14 @@ const Dashboard = () => {
     https://www.linkedin.com
   </a>
 </div>
-
+<div className='flex gap-1'>
+<p>Address:</p>
+  <p>
+    <a href="https://www.google.com/maps/place/Surat,+Gujarat,+India" target="_blank" class="text-blue-500">
+      Surat, Gujarat, India
+    </a>
+  </p>
+        </div>
        </div>
       </section>
     </>
