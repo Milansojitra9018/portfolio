@@ -51,7 +51,6 @@ const Navbar = () => {
     <div className="text-[#000000] dark:text-dark-textgray">
       <div className="flex mt-6 px-6">
         <div className="flex items-center justify-between w-full">
-          {/* Desktop Navbar */}
           <div className="hidden md:flex gap-16 pl-[20%]">
             {navbarValue.map((item) => (
               <div
@@ -68,7 +67,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Icon */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -85,7 +83,7 @@ const Navbar = () => {
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="bg-[#ffffff] dark:bg-[#3b3a3a] p-1 ml-6 rounded-full shadow-lg transition-colors"
+            className="bg-white border dark:border-white border-textgray dark:bg-[#3b3a3a] p-1 ml-6 rounded-full shadow-lg transition-colors"
           >
             {darkMode ? (
               <SunIcon className="h-5 w-8 text-[#ffff06]" />

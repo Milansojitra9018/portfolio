@@ -8,46 +8,33 @@ const config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    screens: {
-      "2sm": "350px",
-      "3sm": "450px",
-      ...defaultTheme.screens,
-    },
-    colors: {
-      primary: "#7f7f7f",
-      secondary: "#667eea",
-      secondaryhover: "#667eea",
-      textgray: "#1a202c",
-      dark: {
-        primary: "#1a1a1a",
-        secondary: "#5c5a5a",
-        secondaryhover: "#5968e5",
-        textgray: "#ffffff",
-      },
-    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#4F46E5",
+        secondary: "#3B82F6",
+        secondaryhover: "#2563EB",
+        textgray: "#2D3748",
+        dark: {
+          primary: "#1A202C",
+          secondary: "#2D3748",
+          secondaryhover: "#2563EB",
+          textgray: "#E2E8F0",
+        },
+        decoration: {
+          primary: "#FF6F61",
+          secondary: "#FBBF24",
+          primaryDark: "#FF7F50",
+          secondaryDark: "#FDBA74",
+        },
       },
-      userSelect: {
-        none: "none",
-        "webkit-none": "-webkit-user-select: none",
-        "moz-none": "-moz-user-select: none",
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        gradient: "linear-gradient(135deg, #667eea, #764ba2)",
       },
     },
   },
-  plugins: [
-    function ({ addBase }) {
-      addBase({
-        "::selection": {
-          color: "#000000",
-          background: "#fff",
-        },
-      });
-    },
-  ],
 };
 
 export default config;
