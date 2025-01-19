@@ -50,7 +50,7 @@ const Footer = () => {
               href="https://www.google.com/maps/place/Surat,+Gujarat,+India"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-blue-500 hover:underline"
+              className="font-medium underline"
             >
               Surat, Gujarat, India
             </a>
