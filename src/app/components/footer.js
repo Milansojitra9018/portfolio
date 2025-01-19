@@ -22,7 +22,7 @@ const Footer = () => {
   </a>
 </div>
 
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <Image src="/images/github.png" alt="GitHub" width={24} height={24} />
             <a
               href="https://github.com/Milansojitra9018"
@@ -32,7 +32,7 @@ const Footer = () => {
             >
               github.com
             </a>
-          </div>
+          </div> */}
           <div className="flex items-center gap-2">
             <Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} />
             <a
