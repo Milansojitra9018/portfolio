@@ -130,7 +130,7 @@ const Dashboard = () => {
                 width={400}
                 height={400}
                 unoptimized
-                className="rounded-full shadow-lg border-2 border-primary dark:border-dark-primary"
+                className="rounded-full shadow-lg border-2 border-primary"
               />
             </div>
             <div className="flex flex-col">
