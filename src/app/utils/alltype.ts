@@ -2,17 +2,17 @@ export const servicesData = [
     {
       title: "Responsive Web Design",
       description: "Crafting visually stunning and user-friendly designs that elevate your brand's online presence.",
-      icon: "/assets/webdesign.webp",
+      icon: "/assets/webdesign.png",
     },
     {
       title: "Frontend Development",
       description: "Building responsive and interactive user interfaces using modern technologies like React and Next.js.",
-      icon: "/assets/frotenddevelopment.webp",
+      icon: "/assets/frontenddev.png",
     },
     {
       title: "SEO",
       description: "Implementing effective SEO strategies to enhance your website's visibility and drive organic traffic.",
-      icon: "/images/seoskill.png",
+      icon: "/assets/seologo.png",
     },
   ];
 
