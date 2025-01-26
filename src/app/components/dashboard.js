@@ -121,7 +121,7 @@ const Dashboard = () => {
         id="home"
         className="bg-[#F9FAFB] dark:bg-dark-primary font-sans pt-8"
       >
-        <div className="min-h-screen flex flex-col justify-center items-center text-center px-4">
+        <div className="min-h-screen flex flex-col justify-center items-center text-center px-12 md:px-4">
           <div className="flex justify-center items-center gap-10 max-sm:flex-col">
             <div>
               <Image
@@ -129,6 +129,7 @@ const Dashboard = () => {
                 alt=""
                 width={400}
                 height={400}
+                unoptimized
                 className="rounded-full shadow-lg border-2 border-primary dark:border-dark-primary"
               />
             </div>
