@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-2">
             <a
-              href="https://www.linkedin.com/in/milansojitra90/"
+              href="https://www.instagram.com/milan_sojitra15?igsh=MWZwbzM5c3c4Z3lpYg=="
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium hover:underline"
