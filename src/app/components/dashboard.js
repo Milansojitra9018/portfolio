@@ -119,7 +119,7 @@ const Dashboard = () => {
     <>
       <section
         id="home"
-        className="bg-[#F9FAFB] dark:bg-dark-primary font-sans pt-8"
+        className="bg-[#F9FAFB] dark:bg-dark-primary font-sans pt-4 "
       >
         <div className="min-h-screen flex flex-col justify-center items-center text-center px-12 md:px-4">
           <div className="flex justify-center items-center gap-10 max-sm:flex-col">
@@ -225,21 +225,26 @@ const Dashboard = () => {
 
       <section
         id="education"
-        className="w-full flex flex-col items-center justify-center py-16 bg-white dark:bg-dark-primary px-2"
+        className="w-full flex flex-col items-center justify-center max-md:py-8 py-12 bg-white dark:bg-dark-primary px-2"
       >
-       <div className="max-lg:flex-col flex justify-between gap-20">
+       <div className="max-lg:flex-col flex justify-between max-md:gap-10 gap-16">
        <div className='flex flex-col justify-center items-center'>
-       <h2 className="text-4xl max-sm:text-3xl font-bold text-center text-gray-800 dark:text-dark-textgray underline decoration-decoration dark:decoration-dark-decoration mb-8">
+       <h2 className="text-4xl max-sm:text-3xl font-bold text-center text-gray-800 dark:text-dark-textgray underline decoration-decoration dark:decoration-dark-decoration max-md:mb-2 mb-4">
           Education
         </h2>
-        <p className="text-lg text-center text-dark-secondary dark:text-dark-textgray mb-10">
+        <p className="text-lg text-center text-dark-secondary dark:text-dark-textgray mb-4 max-md:mb-2">
           Here is an overview of my educational journey and achievements.
         </p>
         <div className="w-full max-w-[400px] items-center justify-center">
-          <div className=" border border-secondary dark:border-dark-secondary bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
-            <div className="w-full flex justify-end">
-              <p className="font-medium border-2 border-dark-primary p-1 rounded-lg bg-slate-200 dark:border-dark-textgray dark:text-white dark:bg-inherit">2019 - 2023</p>
-            </div>
+          <div className=" border-2 border-secondary  bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
+          <div className="w-full flex justify-end">
+  <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg">
+    <p className="font-medium  bg-white dark:bg-dark-secondary text-dark-primary dark:text-white p-1 rounded-lg">
+      2019 - 2023
+    </p>
+  </div>
+</div>
+
             <div className="flex justify-center items-center gap-2 ">
               <Image
                 src={"/images/degree.png"}
@@ -261,17 +266,21 @@ const Dashboard = () => {
        </div>
        <div className="max-lg:hidden border dark:border-dark-textgray border-dark-primary"/>
        <div className="flex flex-col justify-center items-center">
-       <h2 className="text-4xl max-sm:text-3xl font-bold text-center text-gray-800 dark:text-dark-textgray underline decoration-decoration dark:decoration-dark-decoration mb-8">
+       <h2 className="text-4xl max-sm:text-3xl font-bold text-center text-gray-800 dark:text-dark-textgray underline decoration-decoration dark:decoration-dark-decoration max-md:mb-2 mb-4">
           work
         </h2>
-        <p className="text-lg text-center text-dark-secondary dark:text-dark-textgray mb-10">
+        <p className="text-lg text-center text-dark-secondary dark:text-dark-textgray mb-4 max-md:mb-2">
         Here is an overview of my professional journey and experiences.
         </p>
         <div className="w-full max-w-[400px] items-center justify-center">
-          <div className=" border border-secondary dark:border-dark-secondary bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
-            <div className="w-full flex justify-end">
-              <p className="font-medium border-2 border-dark-primary p-1 rounded-lg bg-slate-200 dark:border-dark-textgray dark:text-white dark:bg-inherit">2023 - present</p>
-            </div>
+          <div className=" border-2 border-secondary bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
+          <div className="w-full flex justify-end">
+  <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg">
+    <p className="font-medium bg-white dark:bg-dark-secondary  text-dark-primary dark:text-white p-1 rounded-lg">
+      2023 - present
+    </p>
+  </div>
+</div>
             <div className="flex justify-center items-center ">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-dark-textgray pt-2">
                 Frontend Developer
@@ -304,7 +313,7 @@ const Dashboard = () => {
           {projectData.map((project, index) => (
             <motion.div
               key={index}
-              className="relative border border-primary dark:border-dark-secondary bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 transform hover:shadow-xl  text-white"
+              className="relative border-2 border-primary  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 transform hover:shadow-xl  text-white"
               whileHover={{ scale: 1.05 }}
             >
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-secondaryhover/50 opacity-20 rounded-lg"></div>
@@ -339,7 +348,7 @@ const Dashboard = () => {
           {servicesData.map((service, index) => (
             <motion.div
               key={index}
-              className="border border-secondary dark:border-dark-secondary bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              className="border-2 border-secondary  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}

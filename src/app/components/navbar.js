@@ -38,6 +38,7 @@ const Navbar = () => {
 
   const handleSetActive = (item) => {
     setActiveItem(item);
+    setIsMenuOpen(false)
     const section = document.getElementById(item.toLowerCase());
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });

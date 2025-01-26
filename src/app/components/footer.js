@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="flex items-center gap-2">
   <a href="tel:+919484489018" className="flex items-center">
     <Image src="/images/phone.png" unoptimized alt="Phone" width={24} height={24} />
-    <span className="font-medium">+91 9484489018</span>
+    <span className="font-medium pl-2">+91 9484489018</span>
   </a>
 </div>
 <div className="flex items-center gap-2">
@@ -29,7 +29,7 @@ const Footer = () => {
               className="font-medium underline flex"
             >
     <Image src="/images/map.png" unoptimized alt="Phone" width={24} height={24}/>
-    Surat, Gujarat, India
+  <span className='pl-2'>Surat, Gujarat, India</span>
     </a>
 </div>
 <div className='flex gap-4 justify-start pl-2'>
