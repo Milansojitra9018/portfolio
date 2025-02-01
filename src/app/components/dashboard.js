@@ -123,16 +123,20 @@ const Dashboard = () => {
       >
         <div className="min-h-screen flex flex-col justify-center items-center text-center px-12 md:px-4">
           <div className="flex justify-center items-center gap-10 max-sm:flex-col">
-            <div>
-              <Image
-                src={"/images/milan.png"}
-                alt=""
-                width={400}
-                height={400}
-                unoptimized
-                className="rounded-full shadow-lg border-2 border-primary"
-              />
-            </div>
+          <div className="relative p-[3px] rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 shadow-[0_0_100px_rgba(225,24,25,0.7)]">
+  <div className="w-full">
+    <Image
+      src={"/images/milan.png"}
+      alt=""
+      width={400}
+      height={400}
+      unoptimized
+      className="rounded-full shadow-[0_0_100px_rgba(255,0,255,0.7)]"
+    />
+  </div>
+</div>
+
+
             <div className="flex flex-col">
               <motion.h1
                 className="text-4xl max-sm:text-3xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400   via-pink-500 to-purple-400"
@@ -163,14 +167,14 @@ const Dashboard = () => {
               <div className="mt-8 flex max-sm:gap-4 gap-6 mb-10">
                 <motion.a
                   className="max-sm:px-3 px-6 py-3 bg-secondary text-nowrap text-white rounded-lg hover:bg-secondaryhover transition duration-300"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   onClick={() => handleSetActive("project")}
                 >
                   View My Work
                 </motion.a>
                 <motion.a
                   className="max-sm:px-3 px-6 py-3 text-secondary border text-nowrap border-secondary rounded-lg hover:bg-secondaryhover hover:text-white transition duration-300"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   onClick={() => handleSetActive("contact")}
                 >
                   Contact Me
@@ -192,9 +196,10 @@ const Dashboard = () => {
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
           {technologyData.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className=" flex flex-col items-center max-sm:w-[120px] max-sm:h-[120px] w-[150px] h-[140px] bg-gray-100 rounded-lg shadow-lg dark:bg-dark-secondary text-center border-2 border-textgray dark:border-dark-textgray transition-all"
+              whileHover={{ scale: 1.05 }}
+              className=" flex flex-col items-center max-sm:w-[120px] hover:shadow-[0_0_100px_rgba(255,0,255,0.7)] max-sm:h-[120px] w-[150px] h-[140px] bg-gray-100 rounded-lg shadow-lg dark:bg-dark-secondary text-center  border-2 border-primary transition-all"
             >
               <Image
                 src={item.src}
@@ -216,7 +221,7 @@ const Dashboard = () => {
               >
                 {item.label}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -236,7 +241,7 @@ const Dashboard = () => {
           Here is an overview of my educational journey and achievements.
         </p>
         <div className="w-full max-w-[400px] items-center justify-center">
-          <div className=" border-2 border-secondary  bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
+          <div className=" border-2 border-secondary  hover:shadow-[0_0_100px_rgba(255,0,255,0.7)] bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
           <div className="w-full flex justify-end">
   <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg">
     <p className="font-medium  bg-white dark:bg-dark-secondary text-dark-primary dark:text-white p-1 rounded-lg">
@@ -273,7 +278,7 @@ const Dashboard = () => {
         Here is an overview of my professional journey and experiences.
         </p>
         <div className="w-full max-w-[400px] items-center justify-center">
-          <div className=" border-2 border-secondary bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
+          <div className=" border-2 hover:shadow-[0_0_100px_rgba(255,0,255,0.7)] border-secondary bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
           <div className="w-full flex justify-end">
   <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg">
     <p className="font-medium bg-white dark:bg-dark-secondary  text-dark-primary dark:text-white p-1 rounded-lg">
@@ -281,7 +286,15 @@ const Dashboard = () => {
     </p>
   </div>
 </div>
-            <div className="flex justify-center items-center ">
+            <div className="flex justify-center gap-2 items-center ">
+            <Image
+                src={"/images/laptop.png"}
+                width={20}
+                height={40}
+                alt="degree"
+                className="w-8 pt-3 h-8"
+                unoptimized
+              />
               <h3 className="text-xl font-semibold text-gray-800 dark:text-dark-textgray pt-2">
                 Frontend Developer
               </h3>
@@ -313,7 +326,7 @@ const Dashboard = () => {
           {projectData.map((project, index) => (
             <motion.div
               key={index}
-              className="relative border-2 border-primary  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-all duration-500 hover:scale-105 transform hover:shadow-xl  text-white"
+              className="relative border-2 border-primary  hover:shadow-[0_0_100px_rgba(255,0,255,0.7)] bg-white dark:bg-dark-secondary p-6 rounded-lg transition-all duration-500 hover:scale-105 transform text-white"
               whileHover={{ scale: 1.05 }}
             >
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-secondaryhover/50 opacity-20 rounded-lg"></div>
@@ -348,10 +361,8 @@ const Dashboard = () => {
           {servicesData.map((service, index) => (
             <motion.div
               key={index}
-              className="border-2 border-secondary  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="border-2 border-secondary  hover:shadow-[0_0_100px_rgba(255,0,255,0.7)]  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              whileHover={{ scale: 1.05 }}
             >
               <div className="flex flex-col items-center mb-4">
                 <Image
