@@ -131,6 +131,7 @@ const Dashboard = () => {
       width={400}
       height={400}
       unoptimized
+      loading="lazy"
       className="rounded-full shadow-[0_0_100px_rgba(255,0,255,0.7)]"
     />
   </div>
@@ -206,6 +207,7 @@ const Dashboard = () => {
                 alt={item.label}
                 width={100}
                 height={50}
+                 loading="lazy"
                 className={`object-contain ${
                   item?.label === "HTML" ? "h-[55px] mt-4" : "h-20"
                 } ${
@@ -256,6 +258,7 @@ const Dashboard = () => {
                 width={20}
                 height={40}
                 alt="degree"
+                 loading="lazy"
                 className="w-8 pt-3 h-8"
                 unoptimized
               />
@@ -292,6 +295,7 @@ const Dashboard = () => {
                 width={20}
                 height={40}
                 alt="degree"
+                 loading="lazy"
                 className="w-8 pt-3 h-8"
                 unoptimized
               />
@@ -370,6 +374,7 @@ const Dashboard = () => {
                   alt={`${service.title} icon`}
                   width={100}
                   height={100}
+                   loading="lazy"
                   className="object-contain w-full"
                   unoptimized
                 />
