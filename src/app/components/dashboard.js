@@ -82,7 +82,7 @@ const Dashboard = () => {
       if (response.ok) {
         setFormData({ name: "", email: "", message: "" });
         setError({});
-        alert("Message sent successfully!");
+        alert("Thank you for reaching out!");
       } else {
         throw new Error("Failed to send message.");
       }
