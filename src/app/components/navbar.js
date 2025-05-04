@@ -49,10 +49,11 @@ const Navbar = () => {
   
 
   return (
-    <div className="text-[#000000] dark:text-dark-textgray">
-      <div className="flex mt-6 px-6">
+    <div className="text-[#000000] bg-yellow-400 py-6 border-b-4 dark:border-b-white border-b-primary">
+      <div className="flex  px-6">
         <div className="flex items-center justify-between w-full">
-          <div className="hidden md:flex gap-16 pl-[20%]">
+          <p className='font-semibold max-md:hidden'>MILAN SOJITRA</p>
+          <div className="hidden md:flex gap-10 lg:gap-16 ">
             {navbarValue.map((item) => (
               <div
                 key={item}
@@ -71,12 +72,12 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-700"
+              className="p-2 rounded-full"
             >
               {isMenuOpen ? (
-                <XMarkIcon className="h-6 w-6 text-[#000000] dark:text-[#ffffff]" />
+                <XMarkIcon className="h-6 w-6 text-[#000000]" />
               ) : (
-                <Bars3Icon className="h-6 w-6 text-[#000000] dark:text-[#ffffff]" />
+                <Bars3Icon className="h-6 w-6 text-[#000000]" />
               )}
             </button>
           </div>
@@ -97,7 +98,7 @@ const Navbar = () => {
 
       {/* Mobile Navbar Menu */}
       {isMenuOpen && (
-        <div className="flex flex-col items-center mt-4 space-y-4 md:hidden bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+        <div className="flex flex-col items-center mt-4 space-y-4 md:hidden p-4 rounded-lg">
           {navbarValue.map((item) => (
             <div
               key={item}

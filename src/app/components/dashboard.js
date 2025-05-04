@@ -123,7 +123,7 @@ const Dashboard = () => {
       >
         <div className="min-h-screen flex flex-col justify-center items-center text-center px-12 md:px-4">
           <div className="flex justify-center items-center gap-10 max-sm:flex-col">
-          <div className="relative p-[3px] rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 shadow-[0_0_100px_rgba(225,24,25,0.7)]">
+          <div className="relative p-[3px] rounded-full bg-gradient-to-r from-[#FDC830] to-[#F37335]">
   <div className="w-full">
     <Image
       src={"/images/milan.png"}
@@ -132,7 +132,7 @@ const Dashboard = () => {
       height={400}
       unoptimized
       loading="lazy"
-      className="rounded-full shadow-[0_0_100px_rgba(255,0,255,0.7)]"
+      className="rounded-full"
     />
   </div>
 </div>
@@ -140,7 +140,7 @@ const Dashboard = () => {
 
             <div className="flex flex-col">
               <motion.h1
-                className="text-4xl max-sm:text-3xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400   via-pink-500 to-purple-400"
+                className="text-4xl max-sm:text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400   via-pink-500 to-purple-400"
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -167,7 +167,7 @@ const Dashboard = () => {
               </motion.p>
               <div className="mt-8 flex max-sm:gap-4 gap-6 mb-10">
                 <motion.a
-                  className="max-sm:px-3 px-6 py-3 bg-secondary text-nowrap text-white rounded-lg hover:bg-secondaryhover transition duration-300"
+                  className="max-sm:px-3 px-6 py-3 bg-yellow-400 text-nowrap text-black font-medium rounded-lg hover:bg-yellow-300 transition duration-300"
                   whileHover={{ scale: 1.05 }}
                   onClick={() => handleSetActive("project")}
                 >
@@ -186,7 +186,8 @@ const Dashboard = () => {
         </div>
       </section>
 
-      <div className="w-full bg-gradient-to-r from-[#029FE4] to-[#BB5AE9] h-[3px] rounded-lg shadow-lg dark:from-[#BB5AE9] dark:to-[#029FE4] transition-all" />
+      <div className="w-full bg-gradient-to-r from-[#FDC830] to-[#F37335] h-[3px] rounded-lg shadow-lg dark:from-[#F37335] dark:to-[#FDC830] transition-all" />
+
 
       <section
         id="myskills"
@@ -197,10 +198,12 @@ const Dashboard = () => {
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
           {technologyData.map((item, index) => (
+           <div key={index} className="h-full">
+            <div className="p-[2px] rounded-lg bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500">
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className=" flex flex-col items-center max-sm:w-[120px] hover:shadow-[0_0_100px_rgba(255,0,255,0.7)] max-sm:h-[120px] w-[150px] h-[140px] bg-gray-100 rounded-lg shadow-lg dark:bg-dark-secondary text-center  border-2 border-primary transition-all"
+              className=" flex flex-col items-center max-sm:w-[120px] hover:shadow-[0_0_100px_rgba(253,200,48,0.7)] max-sm:h-[120px] w-[150px] h-[140px] bg-gray-100 rounded-lg shadow-lg dark:bg-dark-secondary text-center  hover:border-2 hover:border-primary transition-all"
             >
               <Image
                 src={item.src}
@@ -224,11 +227,13 @@ const Dashboard = () => {
                 {item.label}
               </p>
             </motion.div>
+              </div>
+            </div>
           ))}
         </div>
       </section>
 
-      <div className="w-full bg-gradient-to-r from-[#029FE4] to-[#BB5AE9] h-[3px] rounded-lg shadow-lg dark:from-[#BB5AE9] dark:to-[#029FE4] transition-all" />
+      <div className="w-full bg-gradient-to-r from-[#FDC830] to-[#F37335]  h-[3px] rounded-lg shadow-lg  transition-all" />
 
       <section
         id="education"
@@ -242,11 +247,11 @@ const Dashboard = () => {
         <p className="text-lg text-center text-dark-secondary dark:text-dark-textgray mb-4 max-md:mb-2">
           Here is an overview of my educational journey and achievements.
         </p>
-        <div className="w-full max-w-[400px] items-center justify-center">
-          <div className=" border-2 border-secondary  hover:shadow-[0_0_100px_rgba(255,0,255,0.7)] bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
+        <div className="w-full max-w-[400px] items-center justify-center p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg">
+          <div className="hover:border-2 hover:border-secondary  hover:shadow-[0_0_100px_rgba(253,200,48,0.7)] bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
           <div className="w-full flex justify-end">
-  <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg">
-    <p className="font-medium  bg-white dark:bg-dark-secondary text-dark-primary dark:text-white p-1 rounded-lg">
+  <div className="p-[2px]  rounded-lg">
+    <p className="font-medium  bg-white dark:bg-dark-secondary  bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-primary  to-teal-500 p-1 rounded-lg">
       2019 - 2023
     </p>
   </div>
@@ -280,11 +285,11 @@ const Dashboard = () => {
         <p className="text-lg text-center text-dark-secondary dark:text-dark-textgray mb-4 max-md:mb-2">
         Here is an overview of my professional journey and experiences.
         </p>
-        <div className="w-full max-w-[400px] items-center justify-center">
-          <div className=" border-2 hover:shadow-[0_0_100px_rgba(255,0,255,0.7)] border-secondary bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
+        <div className="w-full max-w-[400px] items-center justify-center p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg" >
+          <div className="hover:border-2 hover:shadow-[0_0_100px_rgba(253,200,48,0.7)] hover:border-secondary bg-white dark:bg-dark-secondary text-dark-primary dark:text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-4">
           <div className="w-full flex justify-end">
-  <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg">
-    <p className="font-medium bg-white dark:bg-dark-secondary  text-dark-primary dark:text-white p-1 rounded-lg">
+  <div className="p-[2px]  rounded-lg">
+    <p className="font-medium bg-white dark:bg-dark-secondary   bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-primary to-teal-500 p-1 rounded-lg">
       2023 - present
     </p>
   </div>
@@ -312,7 +317,7 @@ const Dashboard = () => {
        </div>
       </section>
 
-      <div className="w-full bg-gradient-to-r from-[#029FE4] to-[#BB5AE9] h-[3px] rounded-lg shadow-lg dark:from-[#BB5AE9] dark:to-[#029FE4] transition-all" />
+      <div className="w-full bg-gradient-to-r from-[#FDC830] to-[#F37335]  h-[3px] rounded-lg shadow-lg transition-all" />
 
       <section
         id="project"
@@ -327,29 +332,36 @@ const Dashboard = () => {
           few highlights of my recent work:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectData.map((project, index) => (
-            <motion.div
-              key={index}
-              className="relative border-2 border-primary  hover:shadow-[0_0_100px_rgba(255,0,255,0.7)] bg-white dark:bg-dark-secondary p-6 rounded-lg transition-all duration-500 hover:scale-105 transform text-white"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="absolute top-0 left-0 right-0 bottom-0 bg-secondaryhover/50 opacity-20 rounded-lg"></div>
+  {projectData.map((project, index) => (
+    <div
+      key={index}
+      className="flex h-full"
+    >
+      <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg w-full h-full">
+        <motion.div
+          className="relative hover:border-2 hover:border-secondary hover:shadow-[0_0_100px_rgba(253,200,48,0.7)] bg-white dark:bg-dark-secondary p-6 rounded-lg transition-all duration-500 hover:scale-105 transform flex flex-col h-full"
+          whileHover={{ scale: 1.05 }}
+        >
+   
 
-              <div className="relative z-10">
-                <h3 className="text-2xl font-semibold mb-2  bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500">
-                  {project?.title}
-                </h3>
-                <p className="text-lg text-dark-secondary dark:text-dark-textgray">
-                  {project?.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+          <div className="relative z-10 flex flex-col h-full">
+            <h3 className="text-2xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-teal-500">
+              {project?.title}
+            </h3>
+            <p className="text-lg text-dark-secondary dark:text-dark-textgray flex-grow">
+              {project?.description}
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  ))}
+</div>
+
       </section>
 
     
-      <div className="w-full bg-gradient-to-r from-[#029FE4] to-[#BB5AE9] h-[3px] rounded-lg shadow-lg dark:from-[#BB5AE9] dark:to-[#029FE4] transition-all" />
+      <div className="w-full bg-gradient-to-r from-[#FDC830] to-[#F37335]  h-[3px] rounded-lg shadow-lg transition-all" />
       <section
         id="services"
         className="min-h-screen py-16 px-6 text-center bg-[#F9FAFB] dark:bg-dark-primary"
@@ -363,9 +375,11 @@ const Dashboard = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-[5%]">
           {servicesData.map((service, index) => (
+           <div key={index} className="flex h-full">
+            <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg w-full h-full">
             <motion.div
               key={index}
-              className="border-2 border-secondary  hover:shadow-[0_0_100px_rgba(255,0,255,0.7)]  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              className="hover:border-2 hover:border-secondary hover:shadow-[0_0_100px_rgba(253,200,48,0.7)]  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
               whileHover={{ scale: 1.05 }}
             >
               <div className="flex flex-col items-center mb-4">
@@ -378,7 +392,7 @@ const Dashboard = () => {
                   className="object-contain w-full"
                   unoptimized
                 />
-                <h3 className="text-2xl font-semibold mt-4  bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500">
+                <h3 className="text-2xl font-semibold mt-4  bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-teal-500">
                   {service.title}
                 </h3>
               </div>
@@ -386,12 +400,15 @@ const Dashboard = () => {
                 {service.description}
               </p>
             </motion.div>
+              </div>
+
+           </div>
           ))}
         </div>
       </section>
 
      
-      <div className="w-full bg-gradient-to-r from-[#029FE4] to-[#BB5AE9] h-[3px] rounded-lg shadow-lg dark:from-[#BB5AE9] dark:to-[#029FE4] transition-all" />
+      <div className="w-full bg-gradient-to-r from-[#FDC830] to-[#F37335] h-[3px] rounded-lg shadow-lg  transition-all" />
 
       <section
       id="contact"
