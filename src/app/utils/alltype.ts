@@ -80,7 +80,7 @@ export const technologyData = [
   { src: "/images/html.png", label: "HTML" },
   { src: "/images/CSS.png", label: "CSS" },
   { src: "/images/JS.png", label: "JavaScript" },
-  { src: "/images/Typescript.png", label: "TypeScript" },
+  { src: "/images/typescript.png", label: "TypeScript" },
   { src: "/images/react.png", label: "React" },
   { src: "/images/nextjs1.png", label: "Next.js" },
   { src: "/images/seo.png", label: "SEO" },
