@@ -49,7 +49,7 @@ const Navbar = () => {
   
 
   return (
-    <div className="text-[#000000] bg-yellow-400 py-6 border-b-4 dark:border-b-white border-b-primary">
+    <div className="text-[#000000] bg-yellow-400 py-6 border-b-2 dark:border-b-white border-b-primary">
       <div className="flex  px-6">
         <div className="flex items-center justify-between w-full">
           <p className='font-semibold max-md:hidden'>MILAN SOJITRA</p>
@@ -59,7 +59,7 @@ const Navbar = () => {
                 key={item}
                 className={`cursor-pointer ${
                   activeItem === item
-                    ? 'underline underline-offset-8 decoration-2 decoration-secondary dark:decoration-dark-secondary'
+                    ? 'underline underline-offset-8 decoration-2 decoration-dark-secondary'
                     : ''
                 }`}
                 onClick={() => handleSetActive(item)}
@@ -104,7 +104,7 @@ const Navbar = () => {
               key={item}
               className={`cursor-pointer ${
                 activeItem === item
-                  ? 'underline underline-offset-8 decoration-2 decoration-secondary dark:decoration-dark-secondary'
+                  ? 'underline underline-offset-8 decoration-2 decoration-dark-secondary'
                   : ''
               }`}
               onClick={() => handleSetActive(item)}
