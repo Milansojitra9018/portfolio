@@ -218,7 +218,7 @@ const Dashboard = () => {
                         ? "h-[55px] mt-4"
                         : "h-20"
                     } ${
-                      item?.label === "SEO" || item?.label === "Next.js"
+                      item?.label === "SEO" || item?.label === "Next.js" || item?.label === "JavaScript"
                         ? "dark:bg-dark-secondary p-2"
                         : ""
                     }`}
