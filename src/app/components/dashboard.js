@@ -367,11 +367,11 @@ const Dashboard = () => {
         className="min-h-screen py-16 px-6 text-center bg-[#F9FAFB] dark:bg-dark-primary"
       >
         <h2 className="text-4xl max-sm:text-3xl font-bold text-gray-800 dark:text-dark-textgray underline decoration-decoration dark:decoration-dark-decoration mb-8">
-          Our Services
+          My Services
         </h2>
         <p className="text-lg text-dark-secondary dark:text-dark-textgray mb-10 max-w-2xl mx-auto">
-          We offer a range of services to help your business succeed online.
-          Explore our areas of expertise below.
+          I offer a range of services to help your business succeed online.
+          Explore my areas of expertise below.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-[5%]">
           {servicesData.map((service, index) => (
@@ -379,7 +379,7 @@ const Dashboard = () => {
               <div className="p-[2px] bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 rounded-lg w-full h-full">
                 <motion.div
                   key={index}
-                  className="hover:border-2 hover:border-secondary hover:shadow-[0_0_100px_rgba(253,200,48,0.7)]  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                  className="hover:border-2 hover:border-secondary hover:shadow-[0_0_100px_rgba(253,200,48,0.7)]  bg-white dark:bg-dark-secondary p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 h-full"
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="flex flex-col items-center mb-4">
@@ -428,7 +428,7 @@ const Dashboard = () => {
                 className="w-full px-4 py-2 border border-textgray dark:border-dark-textgray rounded-lg shadow-lg bg-white dark:bg-dark-secondary text-dark-primary dark:text-white focus:outline-none"
               />
               {error.name && (
-                <p className="text-red-500 text-sm mt-1">{error.name}</p>
+                <p className="text-red-500 text-sm mt-1 text-start">{error.name}</p>
               )}
             </div>
             <div className="mb-4">
@@ -441,7 +441,7 @@ const Dashboard = () => {
                 className="w-full px-4 py-2 border border-textgray dark:border-dark-textgray rounded-lg shadow-lg bg-white dark:bg-dark-secondary text-dark-primary dark:text-white focus:outline-none"
               />
               {error.email && (
-                <p className="text-red-500 text-sm mt-1">{error.email}</p>
+                <p className="text-red-500 text-sm text-start mt-1">{error.email}</p>
               )}
             </div>
             <div className="mb-4">
@@ -453,7 +453,7 @@ const Dashboard = () => {
                 className="w-full px-4 py-2 border border-textgray dark:border-dark-textgray rounded-lg shadow-lg bg-white dark:bg-dark-secondary text-dark-primary dark:text-white focus:outline-none"
               />
               {error.message && (
-                <p className="text-red-500 text-sm mt-1">{error.message}</p>
+                <p className="text-red-500 text-start text-sm mt-1">{error.message}</p>
               )}
             </div>
             {error.general && (

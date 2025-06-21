@@ -55,11 +55,6 @@ export const projectData = [
       "Developed a dynamic admin panel with functionalities including creating, adding, filtering, and searching songs. Implemented bulk upload support via CSV files for efficient management of multiple songs, streamlining content administration.",
   },
   {
-    title: "Softus Infotech Portfolio",
-    description:
-      "Designed and developed a professional portfolio for Softus Infotech, showcasing their services and projects with a clean, modern interface built on Next.js for fast loading times and excellent SEO optimization.",
-  },
-  {
     title: "jewellary web App",
     description:
       "A responsive jewelry website designed to showcase various jewelry products, allowing users to browse through collections, view product details, and add items to their cart. ",
